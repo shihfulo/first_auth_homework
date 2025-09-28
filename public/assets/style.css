@@ -1,0 +1,9 @@
+/* 基本樣式（簡單示意） */
+body { font-family: Arial, Helvetica, sans-serif; background:#f5f6fa; padding:20px; }
+.card { max-width:420px; margin:40px auto; background:white; padding:20px; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.05);}
+input { width:100%; padding:8px; margin:6px 0; }
+button { padding:8px 12px; }
+.error { color:#b00020; margin-bottom:12px; }
+.message { color:#006600; margin-bottom:12px; }
+table { width:100%; border-collapse:collapse; }
+td, th { border:1px solid #eee; padding:8px; }
