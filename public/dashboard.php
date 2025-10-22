@@ -2,6 +2,10 @@
 require_once __DIR__ . '/../src/auth.php';
 require_login();
 ?>
+<?php if (is_system_admin()): ?>
+  <p><a href="admin/users.php">後台：使用者管理（系統管理）</a></p>
+<?php endif; ?>
+
 <!doctype html>
 <html>
 <head>

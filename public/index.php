@@ -15,7 +15,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'] ?? '';
     $res = verify_login($username, $password);
     if ($res['ok']) {
-        $msg = "登入成功！歡迎，" . htmlspecialchars($res['user']['username']);
+        // 登入成功，跳轉至 todos.php
+        header('Location: /auth_project/public/front/todos.php');
+        exit;
     } else {
         $err = $res;
     }
@@ -28,6 +30,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <meta charset="utf-8">
 <title>登入</title>
 <link rel="stylesheet" href="assets/style.css">
+<style>
+    .card { max-width: 400px; }
+    .register-link { 
+        text-align: center; 
+        margin-top: 20px; 
+        padding-top: 20px; 
+        border-top: 1px solid #ddd;
+    }
+    .register-link a { 
+        display: inline-block;
+        background: #2196F3; 
+        color: white; 
+        padding: 10px 20px; 
+        border-radius: 4px; 
+        text-decoration: none;
+        transition: background 0.3s;
+    }
+    .register-link a:hover { 
+        background: #1976D2; 
+    }
+</style>
 </head>
 <body>
 <div class="card">
@@ -53,6 +76,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <label>密碼: <input type="password" name="password" required></label><br><br>
         <button type="submit">登入</button>
     </form>
+
+    <!-- 註冊按鈕 -->
+    <div class="register-link">
+        <p>還沒有帳號嗎？</p>
+        <a href="register.php">前往註冊 →</a>
+    </div>
 <?php endif; ?>
 
 </div>
