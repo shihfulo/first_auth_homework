@@ -1,4 +1,11 @@
 # 🧩 前後台帳號與待辦事項管理系統
+## 📹 教學影片
+
+[![觀看完整教學](https://img.youtube.com/vi/LusZSmIhkjg/maxresdefault.jpg)](https://youtu.be/LusZSmIhkjg)
+
+**點擊上方圖片觀看完整教學影片**
+
+或直接訪問：https://youtu.be/LusZSmIhkjg
 
 這是一個給程式新手練習的 PHP 專案，展示了前後台分離的帳號管理與待辦事項功能。
 
